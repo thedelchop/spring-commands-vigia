@@ -3,7 +3,6 @@
 require 'vigia'
 require 'json'
 require 'json-schema'
-require 'rspec-core'
 
 pid_file_path = File.expand_path("../../../tmp/pids/api_server.pid", __FILE__)
 pid           = File.exist?(pid_file_path) ? File.read(pid_file_path) : nil
