@@ -18,6 +18,7 @@ Gem::Specification.new do |spec|
   # delete this section to allow pushing this gem to any host.
 
   spec.files         = `git ls-files`.split($/)
+  spec.bindir        = 'bin'
   spec.executables   = spec.files.grep(%r{^bin/}) { |f| File.basename(f) }
   spec.test_files    = spec.files.grep(%r{^(test|spec|features)/})
   spec.require_paths = ["lib"]
