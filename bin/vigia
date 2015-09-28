@@ -4,7 +4,7 @@ require 'vigia'
 require 'json'
 require 'json-schema'
 
-pid_file_path = File.expand_path("../../../tmp/pids/api_server.pid", __FILE__)
+pid_file_path = 'tmp/pids/api_server.pid'
 pid           = File.exist?(pid_file_path) ? File.read(pid_file_path) : nil
 
 if pid.blank?
@@ -29,7 +29,7 @@ Vigia::Sail::Example.register('returns valid json', expectation: response_body_f
 Vigia.configure do |config|
 
   config.host        = 'http://api.vcap.me:3005'
-  config.source_file = File.expand_path("../../../api_specification.apib", __FILE__)
+  config.source_file = 'api_specification.apib'
 
   # Reset rspec_config and set up documentation formatter
   config.rspec_config do |rspec_config|
