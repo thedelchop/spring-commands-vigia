@@ -9,7 +9,7 @@ pid           = File.exist?(pid_file_path) ? File.read(pid_file_path) : nil
 
 if pid.blank?
   # start rails server by the easiest way
-  system("bin/rails s -e #{env} -d -p 3005 --pid #{pid_file_path}")
+  system("bin/rails s -d -p 3005 --pid #{pid_file_path}")
   # give some time to the server
   sleep 10
 end
